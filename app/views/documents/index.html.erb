@@ -1,0 +1,27 @@
+<h1>Listing documents</h1>
+
+<table>
+  <tr>
+    <th>Date at</th>
+    <th>Memo</th>
+    <th>Attachment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @documents.each do |document| %>
+  <tr>
+    <td><%= document.date_at %></td>
+    <td><%= document.memo %></td>
+    <td><%= document.attachment %></td>
+    <td><%= link_to 'Show', document %></td>
+    <td><%= link_to 'Edit', edit_document_path(document) %></td>
+    <td><%= link_to 'Destroy', document, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Document', new_document_path %>

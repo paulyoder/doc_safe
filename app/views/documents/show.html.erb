@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date at:</b>
+  <%= @document.date_at %>
+</p>
+
+<p>
+  <b>Memo:</b>
+  <%= @document.memo %>
+</p>
+
+<p>
+  <b>Attachment:</b>
+  <%= @document.attachment %>
+</p>
+
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>
