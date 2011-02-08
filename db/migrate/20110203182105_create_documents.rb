@@ -8,10 +8,11 @@ class CreateDocuments < ActiveRecord::Migration
       t.string :attachment_file_size
       t.string :attachment_fingerprint
       t.datetime :attachment_updated_at
-      t.timestamps
 
-      t.index :date_at
+      t.timestamps
     end
+
+    add_index :documents, :date_at
   end
 
   def self.down

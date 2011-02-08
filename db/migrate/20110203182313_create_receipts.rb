@@ -10,11 +10,12 @@ class CreateReceipts < ActiveRecord::Migration
       t.string :attachment_file_size
       t.string :attachment_fingerprint
       t.datetime :attachment_updated_at
-      t.timestamps
 
-      t.index :date_at
-      t.index :payee
+      t.timestamps
     end
+
+    add_index :receipts, :date_at
+    add_index :receipts, :payee
   end
 
   def self.down

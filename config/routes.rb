@@ -1,6 +1,6 @@
 DocSafe::Application.routes.draw do
+  root :to => 'documents#index'
   resources :receipts
-
   resources :documents
 
   # The priority is based upon order of creation:
